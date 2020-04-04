@@ -1,12 +1,3 @@
-<!-- =========================================================================================
-  File Name: TheNavbar.vue
-  Description: Navbar component
-  Component Name: TheNavbar
-  ----------------------------------------------------------------------------------------
-  Item Name: Vuexy - Vuejs, HTML & Laravel Admin Dashboard Template
-  Author: Pixinvent
-  Author URL: http://www.themeforest.net/user/pixinvent
-========================================================================================== -->
 
 
 <template>
@@ -65,7 +56,7 @@
 
                 <router-link tag="div" to="/" class="vx-logo cursor-pointer mx-auto flex items-center">
                     <img :src="logo" alt="logo" class="w-10 mr-4" v-if="logo">
-                    <span class="vx-logo-text">Vuexy</span>
+                    <span class="vx-logo-text">Reports</span>
                 </router-link>
 
                 <!-- SEARCHBAR -->

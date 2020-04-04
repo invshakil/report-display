@@ -1,12 +1,3 @@
-<!-- =========================================================================================
-    File Name: Main.vue
-    Description: Main layout
-    ----------------------------------------------------------------------------------------
-    Item Name: Vuexy - Vuejs, HTML & Laravel Admin Dashboard Template
-    Author: Pixinvent
-    Author URL: http://www.themeforest.net/user/pixinvent
-========================================================================================== -->
-
 
 <template>
   <div class="layout--main" :class="[layoutTypeClass, navbarClasses, footerClasses, {'app-page': isAppPage}]">
@@ -27,7 +18,7 @@
     <v-nav-menu
       :navMenuItems = "navMenuItems"
       :logo         = "navMenuLogo"
-      title         = "Vuexy"
+      title         = "Reports"
       parent        = ".layout--main" />
 
     <div id="content-area" :class="[contentAreaClass, {'show-overlay': bodyOverlay}]">
@@ -162,12 +153,12 @@ export default {
       navMenuItems      : navMenuItems,
       navMenuLogo       : require('@/assets/images/logo/logo.png'),
       routerTransition  : themeConfig.routerTransition || 'none',
-      routeTitle        : this.$route.meta.pageTitle,
+      routeTitle        : "Reports",
     }
   },
   watch: {
     "$route"() {
-      this.routeTitle = this.$route.meta.pageTitle
+      this.routeTitle = "Reports"
     },
     isThemeDark(val) {
       const color = this.navbarColor == "#fff" && val ? "#10163a" : "#fff"
