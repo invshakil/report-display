@@ -3,6 +3,5 @@ export default {
   highlightColor: 'warning',
   data: [
     {index: 0, label: 'Home',   url: '/',      labelIcon: 'HomeIcon',     highlightAction: false},
-    {index: 1, label: 'Page 2', url: '/page2', labelIcon: 'FileIcon', highlightAction: false},
   ]
 }
