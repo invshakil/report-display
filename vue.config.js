@@ -1,6 +1,7 @@
 
 module.exports = {
     publicPath: '/',
+    lintOnSave: false,
     transpileDependencies: [
         'vue-echarts',
         'resize-detector'
