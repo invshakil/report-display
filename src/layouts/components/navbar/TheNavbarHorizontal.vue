@@ -410,7 +410,7 @@
                 return 'Just Now'
             },
             logout() {
-                // This is just for demo Purpose. If user clicks on logout -> redirect
+                localStorage.removeItem('loggedIn');
                 this.$router.push('/').catch(() => {
                 })
             },

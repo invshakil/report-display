@@ -1,5 +1,3 @@
-
-
 import Vue from 'vue'
 import Router from 'vue-router'
 
@@ -52,7 +50,8 @@ const router = new Router({
                 {
                     path: '/home',
                     name: 'home',
-                    component: () => import('./views/Home.vue')
+                    component: () => import('./views/Home.vue'),
+                    meta: {requiresAuth: true}
                 },
             ],
         },
@@ -66,5 +65,18 @@ router.afterEach(() => {
         appLoading.style.display = "none";
     }
 })
+
+router.beforeEach((to, from, next) => {
+    if (to.meta.requiresAuth) {
+        let auth = window.localStorage.getItem('loggedIn');
+        if (auth === null) {
+            next({name: 'page-login'})
+        } else {
+            next()
+        }
+    } else {
+        next()
+    }
+});
 
 export default router
